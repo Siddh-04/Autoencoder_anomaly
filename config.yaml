@@ -1,0 +1,41 @@
+# Configuration for Autoencoder Anomaly Detection
+
+# Data Configuration
+data:
+  raw_data_path: "data/raw/"
+  processed_data_path: "data/processed/"
+  sm_data_file: "sm_data.h5"  # Standard Model (background) data
+  bsm_data_file: "bsm_data.h5"  # Beyond Standard Model (signal) data
+  train_split: 0.8
+  val_split: 0.1
+  test_split: 0.1
+  
+# Model Configuration
+model:
+  input_dim: 57  # Number of input features (adjust based on your CERN data)
+  encoding_dims: [32, 16, 8]  # Encoder layer dimensions
+  latent_dim: 4  # Bottleneck dimension
+  activation: "relu"
+  output_activation: "linear"
+  dropout_rate: 0.2
+  
+# Training Configuration
+training:
+  batch_size: 256
+  epochs: 100
+  learning_rate: 0.001
+  early_stopping_patience: 15
+  reduce_lr_patience: 10
+  reduce_lr_factor: 0.5
+  checkpoint_dir: "checkpoints/"
+  model_save_path: "models/autoencoder.keras"
+  
+# Evaluation Configuration
+evaluation:
+  anomaly_threshold_percentile: 95  # Percentile for anomaly threshold
+  reconstruction_loss: "mse"  # Mean Squared Error
+  
+# Logging
+logging:
+  log_dir: "logs/"
+  tensorboard_dir: "runs/"
