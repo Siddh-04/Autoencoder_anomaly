@@ -121,7 +121,31 @@ def evaluate_anomaly_detection(config, model_path=None, sm_data_path=None,
         model_path = config['training']['model_save_path']
     
     print(f"\nLoading model from {model_path}...")
-    model = keras.models.load_model(model_path)
+    
+    # Check if we have weights file or full model
+    if model_path.endswith('.keras') or model_path.endswith('.h5'):
+        # Try to load from weights
+        weights_path = model_path.replace('.keras', '_weights.weights.h5').replace('.h5', '_weights.weights.h5')
+        config_path = model_path.replace('.keras', '_config.json').replace('.h5', '_config.json')
+        
+        if os.path.exists(weights_path) and os.path.exists(config_path):
+            print("Loading model from weights and config...")
+            import json
+            with open(config_path, 'r') as f:
+                saved_config = json.load(f)
+            
+            from model import create_autoencoder
+            model = create_autoencoder(saved_config)
+            model.build(input_shape=(None, saved_config['model']['input_dim']))
+            model.load_weights(weights_path)
+            print("Model loaded successfully from weights!")
+        else:
+            print("Weights file not found, attempting to load full model...")
+            from model import Autoencoder
+            model = keras.models.load_model(model_path, custom_objects={'Autoencoder': Autoencoder})
+    else:
+        from model import Autoencoder
+        model = keras.models.load_model(model_path, custom_objects={'Autoencoder': Autoencoder})
     
     # Initialize data processor
     data_processor = DataProcessor(config)

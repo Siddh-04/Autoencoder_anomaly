@@ -153,11 +153,21 @@ def train_autoencoder(config, data_path=None, use_synthetic=False):
         verbose=1
     )
     
-    # Save final model
+    # Save final model weights
     model_save_path = config['training']['model_save_path']
     os.makedirs(os.path.dirname(model_save_path), exist_ok=True)
-    model.save(model_save_path)
-    print(f"\nModel saved to {model_save_path}")
+    
+    # Save weights
+    weights_path = model_save_path.replace('.keras', '_weights.weights.h5')
+    model.save_weights(weights_path)
+    print(f"\nModel weights saved to {weights_path}")
+    
+    # Save model config
+    import json
+    config_path = model_save_path.replace('.keras', '_config.json')
+    with open(config_path, 'w') as f:
+        json.dump(config, f, indent=2)
+    print(f"Model config saved to {config_path}")
     
     # Save scaler
     scaler_path = os.path.join(config['data']['processed_data_path'], 'scaler.pkl')

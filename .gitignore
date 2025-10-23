@@ -61,3 +61,10 @@ logs/
 
 # Tensorboard
 runs/
+
+# Test files
+test_config.yaml
+
+# Generated plots and outputs
+*.png
+*.pdf

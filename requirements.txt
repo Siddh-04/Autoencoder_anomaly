@@ -19,6 +19,7 @@ h5py>=3.0.0
 # Utilities
 tqdm>=4.60.0
 pyyaml>=5.4.0
+joblib>=1.0.0
 
 # Jupyter
 jupyter>=1.0.0
