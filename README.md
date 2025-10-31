@@ -130,7 +130,7 @@ plot_variables(x_bkg.numpy(), x_sig.numpy(), var_names, obj_index=None, ncols=3)
 
 
 
-![[image/variable_plots_objall.png]]
+![[[image/variable_plots_objall.png]]](https://github.com/Siddh-04/Autoencoder_anomaly/blob/de720cfb69399695df6359e5f372cef4d10d02a1/images/variable_plots_objall.png)
 
 
 
@@ -167,6 +167,7 @@ $$
 The Arcitectures and model I've tries listed it here 
 | Architecture | Activation | Latent Dim | Notes |
 |--------------|------------|------------|-------|
+|  |  |  |  |
 
 
 ### Training 
