@@ -2,7 +2,7 @@
 
 | **ROC curve**| **Reconstruction Loss** |
 | --- | --- |
-| ![[roc_curve_eval.png]] | ![[reconstruction_loss_histogram_eval.png]] |
+| ![[/imagesroc_curve_eval.png]] | ![[images/reconstruction_loss_histogram_eval.png]] |
 | **AUC: 0.796** |  |
 
 | **First 10 bkg and its reconstruction** | **10 signal events and their reconstruction** |
