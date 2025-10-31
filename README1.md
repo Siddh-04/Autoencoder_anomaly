@@ -1,5 +1,12 @@
 # Autoencoder
 
+The Autoencoder for anomaly detection for the search of BSM data of bulk gravitron
+
+The datasets and models have been uploaded to the respective directories
+**I've uploaded the codes with respective codes in the markdown format since I don't ave enought computing power to run the model inside the Jupyter Notebook**
+
+
+
 # getting the data
 
  An autoencoder is a type of neural network used to learn efficient codings of input data. The aim of an autoencoder is to learn a representation (encoding) for a set of data, typically for the purpose of dimensionality reduction.
