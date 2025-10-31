@@ -102,7 +102,9 @@ The model works with particle physics features including:
 # Model initialization (X_train must be defined before creating the model)
 model = Autoencoder(input_dim=X_train.shape[1], latent_dim=8)
 
-# Training loop with regularization
+# Training loop with regularization on latent space
+z = model.encoder(X_train)  # Get latent representation
+output = model.decoder(z)
 loss = criterion(output, X_train) + 1e-4 * torch.mean(torch.abs(z))
 
 # Evaluation with no gradient
