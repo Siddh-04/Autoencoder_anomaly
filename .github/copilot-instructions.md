@@ -41,8 +41,8 @@ This repository implements an autoencoder-based anomaly detection system for ide
 
 ### Model Architecture
 - The autoencoder follows an encoder-decoder architecture:
-  - **Encoder**: Progressively reduces dimensionality (input → 64 → 32 → 16 → latent_dim)
-  - **Decoder**: Reconstructs input from latent representation (latent_dim → 32 → 64 → 32 → input)
+  - **Encoder**: Progressively reduces dimensionality (input_dim → 64 → 32 → 16 → latent_dim)
+  - **Decoder**: Reconstructs input from latent representation (latent_dim → 32 → 64 → 32 → input_dim)
 - Use ReLU activation functions between layers
 - Consider L1 regularization on the latent space to encourage sparsity
 
@@ -99,7 +99,7 @@ The model works with particle physics features including:
 ## Common Patterns
 
 ```python
-# Model initialization
+# Model initialization (X_train must be defined before creating the model)
 model = Autoencoder(input_dim=X_train.shape[1], latent_dim=8)
 
 # Training loop with regularization
