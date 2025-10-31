@@ -2,23 +2,23 @@
 
 | **ROC curve**| **Reconstruction Loss** |
 | --- | --- |
-| ![[/imagesroc_curve_eval.png]] | ![[images/reconstruction_loss_histogram_eval.png]] |
+| ![[images/roc_curve_eval.png]] | ![[images/reconstruction_loss_histogram_eval.png]] |
 | **AUC: 0.796** |  |
 
 | **First 10 bkg and its reconstruction** | **10 signal events and their reconstruction** |
 | --------------------------------------- | --------------------------------------------- |
-| ![[compare_reconstructions_bkg.png]]    | ![[compare_reconstructions_sig.png]]          |
+| ![[images/compare_reconstructions_bkg.png]]    | ![[images/compare_reconstructions_sig.png]]          |
 |                                         |                                               |
 
 ## Results of the my personal favorite model (by AUC)
 | **ROC curve**              | **Reconstruction Loss**               |
 | -------------------------- | ------------------------------------- |
-| ![[74_roc_curve_eval.png]] | ![[74_recon_loss_histogram_eval.png]] |
+| ![[images/74_roc_curve_eval.png]] | ![[images/74_recon_loss_histogram_eval.png]] |
 | **AUC: 0.749** |  |
 
 | **First 10 bkg and its reconstruction** | **10 signal events and their reconstruction** |
 | --------------------------------------- | --------------------------------------------- |
-| ![[74_compare_recon_bkg.png]]    | ![[74_compare_recon_sig.png]]          |
+| ![[images/74_compare_recon_bkg.png]]    | ![[images/74_compare_recon_sig.png]]          |
 
 although its AUC is lower, I personally prefer this model since it produces better reconstructions visually.
 
