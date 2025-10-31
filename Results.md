@@ -2,7 +2,7 @@
 
 | **ROC curve**| **Reconstruction Loss** |
 | --- | --- |
-| ![[/imagesroc_curve_eval.png]] | ![[images/reconstruction_loss_histogram_eval.png]] |
+| ![[/imagesroc_curve_eval.png]]](https://github.com/Siddh-04/Autoencoder_anomaly/blob/109e7bc4cb74731cc361b01d0706890e83bf4682/images/74_compare_recon_bkg.png) | ![[[images/reconstruction_loss_histogram_eval.png]]](https://github.com/Siddh-04/Autoencoder_anomaly/blob/109e7bc4cb74731cc361b01d0706890e83bf4682/images/74_compare_recon_sig.png) |
 | **AUC: 0.796** |  |
 
 | **First 10 bkg and its reconstruction** | **10 signal events and their reconstruction** |
