@@ -165,9 +165,21 @@ $$
 $$
 
 The Arcitectures and model I've tries listed it here 
+
+- Note -> Here I'm showing the activation function that I've mostly used
+- 
 | Architecture | Activation | Latent Dim | Notes |
 |--------------|------------|------------|-------|
-|  |  |  |  |
+| 22-64-32-18-32-64-22 | ReLU |  16 ,12, 8 |  |
+| 22-32-18-32-22 | ReLU | 16,12,8 |  |
+| 68-64-32-16-32-64-68 | ReLU | 32,16,8 |  |
+| 68-32-16-32-68 | ReLU | 32,16,8 |  |
+| 68-128-64-32-64-128-68 | ReLU | 12,16,8 |  |
+| 68-128-32-16-32-128-68 | ReLU | 13,16,8 |  |
+| 22-256-128-64-128-256-22 | ReLU | 10,16,8 |  |
+| 22-128-64-32-64-128-22 | ReLU | 20,16,8 |  |
+| 22-64-32-16-32-64-22 | ReLU | 22,16,8 |  |
+| 22-18-22 | Sigmoid | 18 | **Best performing** |
 
 
 ### Training 
