@@ -109,6 +109,7 @@ loss = criterion(output, X_train) + 1e-4 * torch.mean(torch.abs(z))
 model.eval()
 with torch.no_grad():
     reconstructed = model(X_eval)
+    mse_loss = nn.MSELoss(reduction='none')
     losses = mse_loss(reconstructed, X_eval).mean(dim=1).numpy()
 ```
 
