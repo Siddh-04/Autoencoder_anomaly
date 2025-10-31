@@ -7,7 +7,7 @@
 
 | **First 10 bkg and its reconstruction** | **10 signal events and their reconstruction** |
 | --------------------------------------- | --------------------------------------------- |
-| ![[compare_reconstructions_bkg.png]]    | ![[compare_reconstructions_sig.png]]          |
+| ![[[compare_reconstructions_bkg.png]]](https://github.com/Siddh-04/Autoencoder_anomaly/blob/109e7bc4cb74731cc361b01d0706890e83bf4682/images/compare_reconstruction.png)    | ![[compare_reconstructions_sig.png]]          |
 |                                         |                                               |
 
 ## Results of the my personal favorite model (by AUC)
